@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎁 Sorpresa del 2° Dicembre 🎁</title>
+    <title>🎄 Sorpresa del 1° Dicembre 🎄</title>
     <style>
         * {
             margin: 0;
@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Georgia', serif;
-            background: linear-gradient(135deg, #a8e6cf 0%, #dcedc1 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -41,16 +41,15 @@
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.98);
+            background: rgba(255, 255, 255, 0.95);
             border-radius: 30px;
             padding: 50px 40px;
-            max-width: 650px;
+            max-width: 600px;
             width: 100%;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             text-align: center;
             position: relative;
             animation: fadeInScale 1s ease-out;
-            border: 3px dashed #7cb8a8;
         }
 
         @keyframes fadeInScale {
@@ -84,39 +83,26 @@
         }
 
         h1 {
-            color: #4a7c59;
+            color: #c41e3a;
             font-size: 2.2em;
             margin-bottom: 15px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .date {
-            color: #5a6c57;
+            color: #2d5016;
             font-size: 1.3em;
             font-weight: bold;
             margin-bottom: 30px;
         }
 
-        .voucher-badge {
-            background: linear-gradient(135deg, #7cb8a8 0%, #5fa08e 100%);
-            color: white;
-            padding: 15px 40px;
-            border-radius: 50px;
-            display: inline-block;
-            font-size: 1.5em;
-            font-weight: bold;
-            margin: 20px 0;
-            box-shadow: 0 8px 20px rgba(124, 184, 168, 0.4);
-            letter-spacing: 2px;
-        }
-
         .poem {
-            background: linear-gradient(135deg, #f5f5dc 0%, #e8dcc4 100%);
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
             border-radius: 20px;
             padding: 35px;
             margin: 30px 0;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border: 3px solid #7cb8a8;
+            border: 3px solid #c41e3a;
         }
 
         .poem p {
@@ -131,95 +117,56 @@
             margin-bottom: 0;
         }
 
-        .instructions-section {
-            margin-top: 40px;
-        }
-
-        .instructions-box {
-            background: linear-gradient(135deg, #ffffff 0%, #f0f7f4 100%);
+        .surprise-box {
+            background: linear-gradient(135deg, #c41e3a 0%, #8b1629 100%);
+            color: white;
             padding: 30px;
             border-radius: 20px;
-            margin: 20px 0;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-            border: 2px solid #a8e6cf;
-            text-align: left;
+            margin-top: 30px;
+            box-shadow: 0 10px 30px rgba(196, 30, 58, 0.4);
         }
 
-        .instructions-box h3 {
-            color: #4a7c59;
-            font-size: 1.4em;
-            margin-bottom: 20px;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
+        .surprise-box h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
         }
 
-        .instructions-box ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .instructions-box li {
-            color: #2d3748;
-            font-size: 1.15em;
-            line-height: 1.8;
-            margin-bottom: 12px;
-            padding-left: 30px;
-            position: relative;
-        }
-
-        .instructions-box li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #7cb8a8;
-            font-weight: bold;
+        .surprise-box p {
             font-size: 1.3em;
+            line-height: 1.6;
         }
 
-        .massage-icon {
-            font-size: 2.5em;
+        .heart {
+            color: #c41e3a;
+            font-size: 2em;
             margin: 20px 0;
-            animation: pulse 2s ease-in-out infinite;
+            animation: heartbeat 1.5s ease-in-out infinite;
         }
 
-        @keyframes pulse {
+        @keyframes heartbeat {
             0%, 100% {
                 transform: scale(1);
             }
+            25% {
+                transform: scale(1.2);
+            }
             50% {
-                transform: scale(1.1);
+                transform: scale(1);
             }
         }
 
         .footer {
-            margin-top: 35px;
-            padding-top: 25px;
-            border-top: 2px dashed #a8e6cf;
-            color: #5a6c57;
-            font-size: 1.15em;
+            margin-top: 30px;
+            color: #4a5568;
+            font-size: 1.1em;
             font-style: italic;
-        }
-
-        .footer strong {
-            color: #4a7c59;
         }
 
         /* Decorative elements */
         .deco-top, .deco-bottom {
             font-size: 2em;
-            color: #7cb8a8;
+            color: #2d5016;
             margin: 10px 0;
-        }
-
-        .scissors {
-            position: absolute;
-            top: -15px;
-            right: 20px;
-            font-size: 2em;
-            transform: rotate(-45deg);
         }
 
         @media (max-width: 600px) {
@@ -235,13 +182,8 @@
                 font-size: 1.15em;
             }
             
-            .instructions-box li {
-                font-size: 1.05em;
-            }
-
-            .voucher-badge {
-                font-size: 1.2em;
-                padding: 12px 30px;
+            .surprise-box p {
+                font-size: 1.15em;
             }
         }
     </style>
@@ -269,47 +211,28 @@
     </script>
 
     <div class="container">
-        <div class="scissors">✂️</div>
-        
         <div class="header">
-            <div class="emoji-row">🎁 🎄 🎅🏼 ♥️</div>
-            <div class="deco-top">✨ 💆‍♂️ ✨</div>
-            <h1>Sorpresa del 2° Dicembre</h1>
-            <div class="date">Casella N°2 del Calendario dell'Avvento</div>
+            <div class="emoji-row">🎄 🎁 🎅🏼</div>
+            <div class="deco-top">✨ ⭐ ✨</div>
+            <h1>Sorpresa del 1° Dicembre</h1>
+            <div class="date">Casella N°1 del Calendario dell'Avvento</div>
         </div>
 
-        <div class="voucher-badge">🎟️ BUONO MASSAGGIO 30' 🎟️</div>
+        <div class="heart">♥️</div>
 
-        <div class="massage-icon">💆‍♂️</div>
-
-        <div class="instructions-section">
-            <div class="instructions-box">
-                <h3>📋 MODALITÀ DI RISCOSSIONE</h3>
-                <ul>
-                    <li>Presentarsi con muscoli indolenziti (obbligatorio)</li>
-                    <li>Lamentarsi almeno 3 volte del mal di schiena</li>
-                    <li>Assumere posizione orizzontale</li>
-                    <li>Bonus: 5 minuti di "mi gratti la schiena?" omaggio</li>
-                </ul>
-            </div>
-
-            <div class="instructions-box">
-                <h3>💆‍♂️ TERMINI E CONDIZIONI</h3>
-                <ul>
-                    <li>Richiesta prenotazione: minimo 5 minuti di preavviso</li>
-                    <li>Dress code: abbigliamento comodo (o anche no 😏 ihih)</li>
-                    <li>La direzione declina ogni responsabilità per eccessivo relax</li>
-                    <li>Effetti collaterali: possibili ronfi</li>
-                </ul>
-            </div>
+        <div class="surprise-box">
+            <h2>🎁 La tua sorpresa 🎁</h2>
+            <p><strong>Mercatino di Natale in zona</strong></p>
+            <p>+</p>
+            <p><strong>Cioccolata calda insieme</strong></p>
         </div>
 
         <div class="footer">
-            <p><strong>Validità:</strong> Illimitata ♾️</p>
-            <p><strong>Dove:</strong> Nel comfort di casa 🏠</p>
+            <p>Ricordati: devi solo scegliere quando,</p>
+            <p>e scrivermi su WhatsApp prima di partire! 💌</p>
         </div>
 
-        <div class="deco-bottom">🌿 ✨ 🌿</div>
+        <div class="deco-bottom">🎄 ⭐ 🎄</div>
     </div>
 </body>
 </html>
