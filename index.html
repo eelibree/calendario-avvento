@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎁 Sorpresa del 2° Dicembre 🎁</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #a8e6cf 0%, #dcedc1 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Snowflakes animation */
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: white;
+            font-size: 1em;
+            opacity: 0.8;
+            animation: fall linear infinite;
+            user-select: none;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 30px;
+            padding: 50px 40px;
+            max-width: 650px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            position: relative;
+            animation: fadeInScale 1s ease-out;
+            border: 3px dashed #7cb8a8;
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .header {
+            margin-bottom: 30px;
+        }
+
+        .emoji-row {
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        h1 {
+            color: #4a7c59;
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .date {
+            color: #5a6c57;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .voucher-badge {
+            background: linear-gradient(135deg, #7cb8a8 0%, #5fa08e 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            display: inline-block;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 20px 0;
+            box-shadow: 0 8px 20px rgba(124, 184, 168, 0.4);
+            letter-spacing: 2px;
+        }
+
+        .poem {
+            background: linear-gradient(135deg, #f5f5dc 0%, #e8dcc4 100%);
+            border-radius: 20px;
+            padding: 35px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 3px solid #7cb8a8;
+        }
+
+        .poem p {
+            color: #2d3748;
+            font-size: 1.35em;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .poem p:last-child {
+            margin-bottom: 0;
+        }
+
+        .instructions-section {
+            margin-top: 40px;
+        }
+
+        .instructions-box {
+            background: linear-gradient(135deg, #ffffff 0%, #f0f7f4 100%);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 20px 0;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            border: 2px solid #a8e6cf;
+            text-align: left;
+        }
+
+        .instructions-box h3 {
+            color: #4a7c59;
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .instructions-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .instructions-box li {
+            color: #2d3748;
+            font-size: 1.15em;
+            line-height: 1.8;
+            margin-bottom: 12px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .instructions-box li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #7cb8a8;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        .massage-icon {
+            font-size: 2.5em;
+            margin: 20px 0;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        .footer {
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 2px dashed #a8e6cf;
+            color: #5a6c57;
+            font-size: 1.15em;
+            font-style: italic;
+        }
+
+        .footer strong {
+            color: #4a7c59;
+        }
+
+        /* Decorative elements */
+        .deco-top, .deco-bottom {
+            font-size: 2em;
+            color: #7cb8a8;
+            margin: 10px 0;
+        }
+
+        .scissors {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            font-size: 2em;
+            transform: rotate(-45deg);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 35px 25px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .poem p {
+                font-size: 1.15em;
+            }
+            
+            .instructions-box li {
+                font-size: 1.05em;
+            }
+
+            .voucher-badge {
+                font-size: 1.2em;
+                padding: 12px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Snowflakes -->
+    <script>
+        // Create falling snowflakes
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.innerHTML = '❄';
+            snowflake.style.left = Math.random() * 100 + '%';
+            snowflake.style.animationDuration = Math.random() * 3 + 5 + 's';
+            snowflake.style.opacity = Math.random() * 0.6 + 0.4;
+            snowflake.style.fontSize = Math.random() * 1 + 0.5 + 'em';
+            document.body.appendChild(snowflake);
+
+            setTimeout(() => {
+                snowflake.remove();
+            }, 8000);
+        }
+
+        setInterval(createSnowflake, 200);
+    </script>
+
+    <div class="container">
+        <div class="scissors">✂️</div>
+        
+        <div class="header">
+            <div class="emoji-row">🎁 🎄 🎅🏼 ♥️</div>
+            <div class="deco-top">✨ 💆‍♂️ ✨</div>
+            <h1>Sorpresa del 2° Dicembre</h1>
+            <div class="date">Casella N°2 del Calendario dell'Avvento</div>
+        </div>
+
+        <div class="voucher-badge">🎟️ BUONO MASSAGGIO 30' 🎟️</div>
+
+        <div class="massage-icon">💆‍♂️</div>
+
+        <div class="instructions-section">
+            <div class="instructions-box">
+                <h3>📋 MODALITÀ DI RISCOSSIONE</h3>
+                <ul>
+                    <li>Presentarsi con muscoli indolenziti (obbligatorio)</li>
+                    <li>Lamentarsi almeno 3 volte del mal di schiena</li>
+                    <li>Assumere posizione orizzontale</li>
+                    <li>Bonus: 5 minuti di "mi gratti la schiena?" omaggio</li>
+                </ul>
+            </div>
+
+            <div class="instructions-box">
+                <h3>💆‍♂️ TERMINI E CONDIZIONI</h3>
+                <ul>
+                    <li>Richiesta prenotazione: minimo 5 minuti di preavviso</li>
+                    <li>Dress code: abbigliamento comodo (o anche no 😏 ihih)</li>
+                    <li>La direzione declina ogni responsabilità per eccessivo relax</li>
+                    <li>Effetti collaterali: possibili ronfi</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Validità:</strong> Illimitata ♾️</p>
+            <p><strong>Dove:</strong> Nel comfort di casa 🏠</p>
+        </div>
+
+        <div class="deco-bottom">🌿 ✨ 🌿</div>
+    </div>
+</body>
+</html>
